@@ -1,4 +1,5 @@
-import Accueil from './components/Accueil'
+import Accueil from './components/Accueil';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

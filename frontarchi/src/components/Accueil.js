@@ -1,13 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react';
+import Header from './Header';
 
-export class Accueil extends Component {
-    render() {
-        return (
-            <div>
-                <p>salut</p>
-            </div>
-        )
-    }
+function Accueil() {
+    return (
+        <>
+            <Header />
+        </>
+    )
 }
 
 export default Accueil
