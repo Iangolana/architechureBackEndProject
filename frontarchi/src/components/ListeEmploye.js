@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TableEmploye from './TableEmploye';
+import TableEmploye from './assetsComponent/TableEmploye';
 
 class ListeEmploye extends Component {
     state = {
@@ -7,8 +7,6 @@ class ListeEmploye extends Component {
             {code: 'E001', nom: 'Rakoto', fonction: 'Responsable chantier', profile: true},
             {code: 'E002', nom: 'Rabe', fonction: 'Maçon', profile: true},
             {code: 'E003', nom: 'Rasoa', fonction: 'Concièrge', profile: true},
-            {code: 'E004', nom: 'Randria', fonction: 'Gardien', profile: true},
-            {code: 'E004', nom: 'Randria', fonction: 'Gardien', profile: true},
             {code: 'E004', nom: 'Randria', fonction: 'Gardien', profile: true},
         ]
     }
