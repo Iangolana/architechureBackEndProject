@@ -32,6 +32,7 @@ export const NumberInput = ({name, value, onChange, children}) => {
         <div className="form-group">
             <label htmlFor={name}>{children}</label>
             <input type="number" name={name} id={name} value={value} onChange={onChange} className="form-control" />
+            {/* <span class="input-group-text">$</span> */}
         </div>
     )
 }
