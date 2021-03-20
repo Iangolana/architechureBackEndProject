@@ -41,7 +41,6 @@ export class Inscription extends Component {
                                 <RadioButton name="genre" id="homme" value="homme" onChange={this.handleChange} children="Homme" />
                                 <RadioButton name="genre" id="femme" value="femme" onChange={this.handleChange} children="Femme" />
                                 <NumberInput name="numCIN" value={numCIN} onChange={this.handleChange} children="Numero CIN : " montant="Ariary" />
-                                <p className="text text-danger">Categorie de l'employé non-implementé</p>
                                 <div className="form-group">
                                 <label htmlFor="">Categorie et classification professionnelle : </label>
                                 <select className="form-select" aria-label="Default select example" name="categorie" id="categorie" value={categorie} onChange={this.handleChange}>
