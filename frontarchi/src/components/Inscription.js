@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TextInput, DateInput, RadioButton, NumberInput} from './assetsComponent/inputType';
+import { TextInput, DateInput, RadioButton, NumberInput, SelectInput} from './assetsComponent/inputType';
 
 
 export class Inscription extends Component {
@@ -26,7 +26,7 @@ export class Inscription extends Component {
     }
 
     render() {
-        const {nomEmploye, prenomEmploye, dateAnnif, numCIN, posteFonction, tauxHoraire, categorie, typeCategorie} = this.state;
+        const {nomEmploye, prenomEmploye, dateAnnif, numCIN, posteFonction, tauxHoraire, categorie, typeCategorie, allocation} = this.state;
         return (
             <div className="container">
                 <h1>Inscription</h1>
@@ -34,27 +34,19 @@ export class Inscription extends Component {
                     <div className="row">
                         <div className="col-sm-6">
                             <div className="form-group">
-                                <TextInput name="nomEmploye" value={nomEmploye} onChange={this.handleChange} children="Nom : " />
-                                <TextInput name="prenomEmploye" value={prenomEmploye} onChange={this.handleChange} children="Prénom(s) : " />
-                                <DateInput name="dateAnnif" value={dateAnnif} children="Date de naissance : " onChange={this.handleChange} />
+                                <TextInput name="nomEmploye" value={nomEmploye} onChange={this.handleChange} children="Nom" />
+                                <TextInput name="prenomEmploye" value={prenomEmploye} onChange={this.handleChange} children="Prénom(s)" />
+                                <DateInput name="dateAnnif" value={dateAnnif} children="Date de naissance" onChange={this.handleChange} />
                                 <label>Genre : </label>
                                 <RadioButton name="genre" id="homme" value="homme" onChange={this.handleChange} children="Homme" />
                                 <RadioButton name="genre" id="femme" value="femme" onChange={this.handleChange} children="Femme" />
-                                <NumberInput name="numCIN" value={numCIN} onChange={this.handleChange} children="Numero CIN : " montant="Ariary" />
-                                <div className="form-group">
-                                <label htmlFor="">Categorie et classification professionnelle : </label>
-                                <select className="form-select" aria-label="Default select example" name="categorie" id="categorie" value={categorie} onChange={this.handleChange}>
-                                    {
-                                        typeCategorie.map((categorie, index)=>{
-                                            return <option value={categorie} key={index} >{categorie}</option>
-                                        })
-                                    }
-                                </select>
-                                </div>
-                                <TextInput name="posteFonction" value={posteFonction} children="Poste de reponsabilité : " onChange={this.handleChange} />
-                                <NumberInput name="tauxHoraire" value={tauxHoraire} children="Taux horaire : " onChange={this.handleChange} />
+                                <NumberInput name="numCIN" value={numCIN} onChange={this.handleChange} children="Numero CIN" montant="Ariary" />
+                                <SelectInput name="categorie" value={categorie} children="Categorie et classification professionnelle" onChange={this.handleChange} tabValue={typeCategorie} />
+                                <TextInput name="posteFonction" value={posteFonction} children="Poste de reponsabilité" onChange={this.handleChange} />
+                                <NumberInput name="tauxHoraire" value={tauxHoraire} unity="Ariary par heure" children="Taux horaire" onChange={this.handleChange} />
+                                <NumberInput name="allocation" value={allocation} unity="Ariary" children="Allocation de salaire" onChange={this.handleChange} />
                                 <button className="btn btn-light">Valider</button>
-                                {JSON.stringify(this.state)}
+                                {/* {JSON.stringify(this.state)} */}
                             </div>
                         </div>
                     </div>
